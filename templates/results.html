@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Ergebnis</h1>
+    <p>Du hast {{ score }} von {{ total }} Fragen richtig beantwortet.</p>
+    <p>Ergebnis: {{ percentage }}%</p>
+    {% if passed %}
+        <p>Glückwunsch, du hast das Quiz bestanden!</p>
+    {% else %}
+        <p>Leider nicht bestanden. Versuche es noch einmal!</p>
+    {% endif %}
+    <a href="{{ url_for('index') }}">Zurück zur Startseite</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Willkommen zum Quiz!</h1>
+    <form action="{{ url_for('start_quiz') }}" method="post">
+        <button type="submit">Quiz starten</button>
+    </form>
+</body>
+</html>
